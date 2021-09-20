@@ -7,7 +7,13 @@ export type LogoProps = {
 export default function Logo({ color = 'white' }: LogoProps) {
   return (
     <S.Container color={color}>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 158 48">
+      <svg
+        role="img"
+        fill="none"
+        viewBox="0 0 158 48"
+        aria-label="Won Games"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           fill="url(#paint0_linear)"
           d="M.05 15.23L.02 35.87a6 6 0 009.33 5l20.6-13.72 20.54 13.8a6 6 0 009.34-4.97l.04-20A11.81 11.81 0 0044.75 4.62l-.87.25a50.87 50.87 0 01-29.36-.27A11.15 11.15 0 00.05 15.23z"
