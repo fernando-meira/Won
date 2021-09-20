@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -10,15 +10,14 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  html {
-    font-size: 62.5%;
-  }
+  ${({ theme }) => css`
+    html {
+      font-size: 62.5%;
+    }
 
-  html, body, #__next {
-    height: 100%;
-  }
-
-  body {
-    font-family: 'Poppins', ---apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+    body {
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
+    }
+  `}
 `;
