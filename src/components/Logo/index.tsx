@@ -2,11 +2,12 @@ import * as S from './styles';
 
 export type LogoProps = {
   color?: 'white' | 'black';
+  size?: 'normal' | 'large';
 };
 
-export default function Logo({ color = 'white' }: LogoProps) {
+export default function Logo({ color = 'white', size = 'normal' }: LogoProps) {
   return (
-    <S.Container color={color}>
+    <S.Container color={color} size={size}>
       <svg
         role="img"
         fill="none"
