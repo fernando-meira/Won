@@ -20,6 +20,14 @@ describe('<Logo />', () => {
     });
   });
 
+  it('should render normal logo size when size is default', () => {
+    renderWithTheme(<Logo size="normal" />);
+
+    expect(screen.getByLabelText(/won games/i).parentElement).toHaveStyle({
+      width: '11rem',
+    });
+  });
+
   it('should render bigger size', () => {
     renderWithTheme(<Logo size="large" />);
 
