@@ -16,20 +16,29 @@ export const Container = styled.div`
     `}
 `;
 
-export const Progress = styled.span<{ width: number; isChecked: boolean }>`
+export const Progress = styled.span<{ width: number; isChecked?: boolean }>`
   ${({ theme, width, isChecked }) =>
     theme &&
     css`
       height: 4px;
       width: ${width}%;
-      border-radius: 4px;
+      /* border-radius: 4px; */
 
       background-color: ${isChecked
         ? theme.colors.white
         : theme.colors.darkGray};
     `}
 
-  &:not(:first-child) {
-    margin-left: 4px;
+  &:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
+
+  &:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  /* &:not(:first-child) {
+    margin-left: 4px;
+  } */
 `;
