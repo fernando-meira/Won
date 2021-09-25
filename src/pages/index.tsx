@@ -1,11 +1,5 @@
-import { Test, Logo } from '~/components';
+import Dashboard from './Dashboard/index';
 
 export default function Home() {
-  return (
-    <>
-      {/* <Logo size="large" color="black" /> */}
-
-      <Test />
-    </>
-  );
+  return <Dashboard />;
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import * as S from './styles';
 
-export default function Test() {
+export default function Progress() {
   const [checked, setChecked] = useState(0);
 
   function getRandom(min = 0, max = 10) {
