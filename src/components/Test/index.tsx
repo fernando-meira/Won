@@ -16,8 +16,6 @@ export default function Test() {
 
   useEffect(() => {
     if (checked <= array.length) {
-      console.log(checked);
-
       setTimeout(() => {
         setChecked((checked) => checked + 1);
       }, 1000);
