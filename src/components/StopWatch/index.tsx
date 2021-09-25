@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { FaStop, FaPlay } from 'react-icons/fa';
+import { useState, useEffect, useMemo } from 'react';
+import { FaStop, FaPlay, FaPause } from 'react-icons/fa';
 
 import formatTime from '~/utils/FormatTime';
 
@@ -14,14 +14,6 @@ export default function StopWatch() {
     setMinutes(0);
     setSeconds(0);
     setPlay(false);
-  };
-
-  const handlePlay = () => {
-    if (play) {
-      return reset();
-    }
-
-    return setPlay(true);
   };
 
   useEffect(() => {
@@ -46,11 +38,35 @@ export default function StopWatch() {
     }
   }, [play, seconds, minutes]);
 
-  return (
-    <S.TimerWrapper>
-      <S.Button onClick={handlePlay}>{play ? <FaStop /> : <FaPlay />}</S.Button>
+  const renderButton = useMemo(() => {
+    if (play) {
+      return (
+        <>
+          <S.Button onClick={() => setPlay(false)}>
+            <FaPause />
+          </S.Button>
 
-      <S.Timer>{`${formatTime(minutes)}:${formatTime(seconds)}`}</S.Timer>
-    </S.TimerWrapper>
+          <S.Button onClick={reset}>
+            <FaStop />
+          </S.Button>
+        </>
+      );
+    }
+
+    return (
+      <S.Button onClick={() => setPlay(true)}>
+        <FaPlay />
+      </S.Button>
+    );
+  }, [play]);
+
+  return (
+    <S.Container>
+      <S.ButtonWrapper>{renderButton}</S.ButtonWrapper>
+
+      <S.TimerWrapper>
+        <S.Timer>{`${formatTime(minutes)}:${formatTime(seconds)}`}</S.Timer>
+      </S.TimerWrapper>
+    </S.Container>
   );
 }

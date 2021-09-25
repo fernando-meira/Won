@@ -1,14 +1,28 @@
 import styled, { css } from 'styled-components';
 
+export const Container = styled.div``;
+
+export const ButtonWrapper = styled.div`
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: ${({ theme }) => theme.colors.darkGray};
+`;
+
 export const TimerWrapper = styled.div`
   padding: 0.4rem;
-  width: 14rem;
-  border-radius: 4px;
+  width: 10rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   background-color: ${({ theme }) => theme.colors.darkGray};
 `;
@@ -17,10 +31,10 @@ export const Button = styled.button`
   ${({ theme }) =>
     theme &&
     css`
-      border: none;
       width: 4rem;
-      padding: 0.4rem;
       height: 4rem;
+      border: none;
+      padding: 0.4rem;
       border-radius: 4px;
 
       display: flex;
@@ -28,7 +42,7 @@ export const Button = styled.button`
       justify-content: center;
 
       cursor: pointer;
-      background-color: ${theme.colors.gray};
+      background-color: transparent;
 
       > svg {
         width: 1.5rem;
