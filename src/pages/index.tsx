@@ -1,5 +1,5 @@
-import Dashboard from './Dashboard/index';
+import { Main } from '~/components';
 
 export default function Home() {
-  return <Dashboard />;
+  return <Main />;
 }

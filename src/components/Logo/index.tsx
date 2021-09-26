@@ -5,7 +5,7 @@ export type LogoProps = {
   size?: 'normal' | 'large';
 };
 
-export default function Logo({ color = 'white', size = 'normal' }: LogoProps) {
+export default function Logo({ size = 'normal', color = 'white' }: LogoProps) {
   return (
     <S.Container color={color} size={size}>
       <svg

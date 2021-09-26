@@ -2,12 +2,11 @@ import styled, { css } from 'styled-components';
 
 import { LogoProps } from '.';
 
-const wrapperModifier = {
+const whapperModifier = {
   normal: () => css`
     width: 11rem;
     height: 3.3rem;
   `,
-
   large: () => css`
     width: 20rem;
     height: 5.9rem;
@@ -15,9 +14,10 @@ const wrapperModifier = {
 };
 
 export const Container = styled.div<LogoProps>`
-  ${({ theme, color, size }) => css`
-    color: ${theme.colors[color!]};
+  ${({ theme, color, size }) =>
+    css`
+      color: ${theme.colors[color!]};
 
-    ${!!size && wrapperModifier[size]}
-  `}
+      ${!!size && whapperModifier[size]};
+    `}
 `;
