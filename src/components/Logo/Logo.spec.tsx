@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import 'jest-styled-components';
 
 import { renderWithTheme } from '~/utils/tests/helpers';
 
@@ -43,5 +44,17 @@ describe('<Logo />', () => {
       width: '20rem',
       height: '5.9rem',
     });
+  });
+
+  it('should render a bigger logo without text id hideOnMobile', () => {
+    renderWithTheme(<Logo hideOnMobile />);
+
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyleRule(
+      'width',
+      '5.8rem',
+      {
+        media: '(max-width: 768px)',
+      }
+    );
   });
 });

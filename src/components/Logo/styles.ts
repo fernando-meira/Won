@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 import { LogoProps } from '.';
 
-const whapperModifier = {
+const wrapperModifier = {
   normal: () => css`
     width: 11rem;
     height: 3.3rem;
@@ -11,13 +12,29 @@ const whapperModifier = {
     width: 20rem;
     height: 5.9rem;
   `,
+  hideOnMobile: () => css`
+    ${media.lessThan('medium')`
+      width: 5.8rem;
+      height: 4.5rem;
+
+      svg {
+        height: 4.5rem;
+        pointer-events: none;
+
+        .text {
+          display: none;
+        }
+      }
+    `}
+  `,
 };
 
 export const Container = styled.div<LogoProps>`
-  ${({ theme, color, size }) =>
+  ${({ theme, color, size, hideOnMobile }) =>
     css`
       color: ${theme.colors[color!]};
 
-      ${!!size && whapperModifier[size]};
+      ${!!size && wrapperModifier[size]};
+      ${!!hideOnMobile && wrapperModifier.hideOnMobile};
     `}
 `;
