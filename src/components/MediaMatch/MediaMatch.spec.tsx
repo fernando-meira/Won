@@ -19,14 +19,13 @@ describe('<MediaMatch />', () => {
         </MediaMatch>
       </>
     );
+
+    desktopHeading = screen.getByTestId('desktop');
+    mobileHeading = screen.getByTestId('mobile');
   });
 
-  desktopHeading = screen.getByTestId('desktop');
-  mobileHeading = screen.getByTestId('mobile');
-
   it('should be hidden if no media query is passed', () => {
-    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'none', {
-      media: 'media(max-width: 768px)',
-    });
+    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'none');
+    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'none');
   });
 });
