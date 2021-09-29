@@ -8,8 +8,24 @@ export type MediaMatchProps = {
   greaterThan?: breakpoint;
 };
 
+const mediaMatchModifier = {
+  lessThan: (size: breakpoint) => css`
+    ${media.lessThan(size)`
+      display: block;
+    `}
+  `,
+  greaterThan: (size: breakpoint) => css`
+    ${media.greaterThan(size)`
+    display: block;
+  `}
+  `,
+};
+
 export default styled.div<MediaMatchProps>`
   ${({ lessThan, greaterThan }) => css`
     display: none;
+
+    ${!!lessThan && mediaMatchModifier.lessThan(lessThan)};
+    ${!!greaterThan && mediaMatchModifier.greaterThan(greaterThan)};
   `}
 `;
