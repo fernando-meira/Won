@@ -5,7 +5,7 @@ import formatTime from '~/utils/FormatTime';
 
 import * as S from './styles';
 
-export default function StopWatch() {
+const StopWatch = () => {
   const [play, setPlay] = useState(false);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
@@ -69,4 +69,6 @@ export default function StopWatch() {
       </S.TimerWrapper>
     </S.Container>
   );
-}
+};
+
+export { StopWatch };
