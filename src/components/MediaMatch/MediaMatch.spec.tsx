@@ -25,8 +25,8 @@ describe('<MediaMatch />', () => {
   });
 
   it('should be hidden if no media query is passed', () => {
-    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'none');
-    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'none');
+    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'hidden');
+    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'hidden');
   });
 
   it('should show or hide based on the media passed', () => {
