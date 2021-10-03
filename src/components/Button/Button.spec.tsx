@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
 
-import {{pascalCase name}} from '.';
+import Button from '.';
 
-describe('<{{pascalCase name}} />', () => {
+describe('<Button />', () => {
   it('should render the heading', () => {
-    const { container } = render(<{{pascalCase name}} />);
+    const { container } = render(<Button />);
 
     expect(
       screen.getByRole('heading', {
-        name: /{{pascalCase name}}/i,
+        name: /Button/i,
       })
     ).toBeInTheDocument();
   });
