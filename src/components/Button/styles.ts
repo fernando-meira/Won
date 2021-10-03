@@ -45,6 +45,7 @@ export const Container = styled.button<WrapperProps>`
     padding: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
 
+    cursor: pointer;
     color: ${theme.colors.white};
     background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
 
