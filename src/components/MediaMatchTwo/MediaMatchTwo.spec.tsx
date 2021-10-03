@@ -1,5 +1,5 @@
+import { screen, render } from '@testing-library/react';
 import 'jest-styled-components';
-import { render, screen } from '@testing-library/react';
 
 import MediaMatchTwo from '.';
 
@@ -19,12 +19,11 @@ describe('<MediaMatchTwo />', () => {
         </MediaMatchTwo>
       </>
     );
-
     mobileElement = screen.getByTestId('mobile');
     desktopElement = screen.getByTestId('desktop');
   });
 
-  it('should be hidden if media query is not passed', () => {
+  it('should be hidden if not media query is passed', () => {
     expect(mobileElement.parentElement).toHaveStyleRule('display', 'none');
     expect(desktopElement.parentElement).toHaveStyleRule('display', 'none');
   });

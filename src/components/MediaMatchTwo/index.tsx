@@ -1,4 +1,4 @@
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 import media, { DefaultBreakpoints } from 'styled-media-query';
 
 type breakpoints = keyof DefaultBreakpoints;
