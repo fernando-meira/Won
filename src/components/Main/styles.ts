@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const Wrapper = styled.main`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 2.4rem;
 
   display: flex;

@@ -8,7 +8,3 @@ export default {
 } as Meta;
 
 export const Basic: Story<LogoProps> = (args) => <Logo {...args} />;
-
-export const DefaultLogo: Story<LogoProps> = (args) => (
-  <Logo {...args} color="black" />
-);

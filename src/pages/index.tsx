@@ -1,5 +1,5 @@
-import Logo from '~/components/Logo';
+import { Main } from '~/components';
 
 export default function Home() {
-  return <Logo size="large" />;
+  return <Main />;
 }

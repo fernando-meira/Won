@@ -11,7 +11,5 @@ describe('<{{pascalCase name}} />', () => {
         name: /{{pascalCase name}}/i,
       })
     ).toBeInTheDocument();
-
-    expect(container.firstChild).toMatchSnapshot();
   });
 });
