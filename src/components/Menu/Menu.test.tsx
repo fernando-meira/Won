@@ -12,4 +12,14 @@ describe('<Menu />', () => {
     expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/open shopping cart/i)).toBeInTheDocument();
   });
+
+  it('should handle the open and close mobile menu.', () => {
+    renderWithTheme(<Menu />);
+
+    // Selecionar o menu
+    expect(screen.getByRole('navigation', { hidden: true }));
+
+    // Verificar se o menu está escondido
+    // expect()
+  });
 });

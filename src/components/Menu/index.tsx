@@ -25,6 +25,8 @@ const Menu = () => (
         <ShoppingCartIcon />
       </S.IconWrapper>
     </S.MenuGroup>
+
+    <S.MenuFull></S.MenuFull>
   </S.Container>
 );
 
