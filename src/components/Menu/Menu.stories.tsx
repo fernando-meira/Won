@@ -8,3 +8,19 @@ export default {
 } as Meta;
 
 export const Default: Story = () => <Menu />;
+
+Default.parameters = {
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'light',
+        value: '#fafafa',
+      },
+      {
+        name: 'dark',
+        value: '#282a36',
+      },
+    ],
+  },
+};

@@ -26,7 +26,7 @@ export const IconWrapper = styled.div`
     height: 2.4rem;
 
     cursor: pointer;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.white};
   `}
 `;
 
