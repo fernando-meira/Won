@@ -8,20 +8,20 @@ import * as S from './styles';
 
 const Menu = () => (
   <S.Container>
-    <S.IconWrapper>
+    <S.IconWrapper aria-label="Open menu">
       <MenuIcon />
     </S.IconWrapper>
 
-    <S.LogoWrapper>
+    <S.LogoWrapper aria-label="Logo">
       <Logo hideOnMobile />
     </S.LogoWrapper>
 
     <S.MenuGroup>
-      <S.IconWrapper>
+      <S.IconWrapper aria-label="Search">
         <SearchIcon />
       </S.IconWrapper>
 
-      <S.IconWrapper>
+      <S.IconWrapper aria-label="Open shopping cart">
         <ShoppingCartIcon />
       </S.IconWrapper>
     </S.MenuGroup>
