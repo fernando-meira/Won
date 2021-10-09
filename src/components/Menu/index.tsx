@@ -12,7 +12,10 @@ const Menu = () => {
 
   return (
     <S.Container>
-      <S.IconWrapper aria-label="Open menu">
+      <S.IconWrapper
+        aria-label="Open menu"
+        onClick={() => setIsVisibleMenu(true)}
+      >
         <MenuIcon />
       </S.IconWrapper>
 
