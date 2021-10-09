@@ -21,6 +21,7 @@ describe('<Menu />', () => {
 
     // Verificar se o menu está escondido
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true');
+    expect(fullMenuElement).toHaveStyle({ opacity: 0 });
 
     // expect(fullMenuElement.getA)
   });

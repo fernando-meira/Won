@@ -42,4 +42,12 @@ export const MenuGroup = styled.div`
   `}
 `;
 
-export const MenuFull = styled.nav``;
+type MenuFullProps = {
+  isVisibleMenu: boolean;
+};
+
+export const MenuFull = styled.nav<MenuFullProps>`
+  ${({ isVisibleMenu }) => css`
+    opacity: ${isVisibleMenu ? 1 : 0};
+  `}
+`;
