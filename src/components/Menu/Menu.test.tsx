@@ -17,9 +17,11 @@ describe('<Menu />', () => {
     renderWithTheme(<Menu />);
 
     // Selecionar o menu
-    expect(screen.getByRole('navigation', { hidden: true }));
+    const fullMenuElement = screen.getByRole('navigation', { hidden: true });
 
     // Verificar se o menu está escondido
-    // expect()
+    expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true');
+
+    // expect(fullMenuElement.getA)
   });
 });
