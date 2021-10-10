@@ -7,9 +7,9 @@ export default {
   component: Menu,
 } as Meta;
 
-export const Default: Story = () => <Menu />;
+export const Mobile: Story = () => <Menu />;
 
-Default.parameters = {
+Mobile.parameters = {
   backgrounds: {
     default: 'dark',
     values: [
@@ -23,4 +23,10 @@ Default.parameters = {
       },
     ],
   },
+
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
+
+  layout: 'fullscreen',
 };

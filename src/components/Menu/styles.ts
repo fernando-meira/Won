@@ -47,7 +47,18 @@ type MenuFullProps = {
 };
 
 export const MenuFull = styled.nav<MenuFullProps>`
-  ${({ isVisibleMenu }) => css`
+  ${({ theme, isVisibleMenu }) => css`
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+
+    height: 100vh;
+
+    background: ${theme.colors.white};
     opacity: ${isVisibleMenu ? 1 : 0};
+    pointer-events: ${isVisibleMenu ? 'all' : 'none'};
   `}
 `;
