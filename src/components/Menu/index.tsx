@@ -9,7 +9,11 @@ import Logo from 'components/Logo';
 import * as S from './styles';
 import Button from '../Button';
 
-const Menu = () => {
+export type MenuProps = {
+  username?: string;
+};
+
+const Menu = ({ username }: MenuProps) => {
   const [isVisibleMenu, setIsVisibleMenu] = useState(false);
 
   return (
@@ -44,18 +48,28 @@ const Menu = () => {
         <S.MenuNav>
           <S.MenuLink href="#">Home</S.MenuLink>
 
-          <S.MenuLink href="#">Explore</S.MenuLink>
+          <S.MenuLink href="#">Store</S.MenuLink>
+
+          {!!username && (
+            <>
+              <S.MenuLink href="#">My account</S.MenuLink>
+
+              <S.MenuLink href="#">Wishlist</S.MenuLink>
+            </>
+          )}
         </S.MenuNav>
 
-        <S.RegisterBox>
-          <Button isFullWidth size="large">
-            Log in now
-          </Button>
+        {!username && (
+          <S.RegisterBox>
+            <Button isFullWidth size="large">
+              Log in now
+            </Button>
 
-          <span>or</span>
+            <span>or</span>
 
-          <S.CreateAccount href="#">Sign up</S.CreateAccount>
-        </S.RegisterBox>
+            <S.CreateAccount href="#">Sign up</S.CreateAccount>
+          </S.RegisterBox>
+        )}
       </S.MenuFull>
     </S.Container>
   );
