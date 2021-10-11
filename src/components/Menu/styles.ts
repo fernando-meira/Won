@@ -1,7 +1,7 @@
 import media from 'styled-media-query';
 import styled, { css } from 'styled-components';
 
-type MenuFullProps = {
+type MenuMobileProps = {
   isVisibleMenu: boolean;
 };
 
@@ -38,6 +38,7 @@ export const MenuGroup = styled.div`
   ${({ theme }) => css`
     flex-grow: 1;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
 
     > div {
@@ -46,7 +47,7 @@ export const MenuGroup = styled.div`
   `}
 `;
 
-export const MenuFull = styled.nav<MenuFullProps>`
+export const MenuMobile = styled.nav<MenuMobileProps>`
   ${({ theme, isVisibleMenu }) => css`
     top: 0;
     left: 0;
@@ -90,8 +91,8 @@ export const MenuFull = styled.nav<MenuFullProps>`
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.xlarge};
       margin-bottom: ${theme.spacings.small};
-      transform: ${isVisibleMenu ? 'translateY(0)' : 'translateY(3rem)'};
       transition: transform 0.3s ease-in-out;
+      transform: ${isVisibleMenu ? 'translateY(0)' : 'translateY(3rem)'};
     }
 
     ${RegisterBox} {
@@ -101,7 +102,13 @@ export const MenuFull = styled.nav<MenuFullProps>`
   `}
 `;
 
-export const MenuNav = styled.div``;
+export const MenuNav = styled.div`
+  ${({ theme }) => css`
+    ${media.greaterThan('medium')`
+      margin-left: ${theme.spacings.small};
+    `}
+  `}
+`;
 
 export const MenuLink = styled.a`
   ${({ theme }) => css`
@@ -110,6 +117,7 @@ export const MenuLink = styled.a`
 
     text-align: center;
     text-decoration: none;
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
 
     &:hover {
