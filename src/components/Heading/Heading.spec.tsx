@@ -52,4 +52,16 @@ describe('<Heading />', () => {
       modifier: '::after',
     });
   });
+
+  it('should be render heading with small size', () => {
+    renderWithTheme(<Heading size="small">Heading test</Heading>);
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Heading test/i,
+      })
+    ).toHaveStyle({
+      'font-size': '1.6rem',
+    });
+  });
 });
