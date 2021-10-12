@@ -64,4 +64,16 @@ describe('<Heading />', () => {
       'font-size': '1.6rem',
     });
   });
+
+  it('should be render heading with medium size', () => {
+    renderWithTheme(<Heading>Heading test</Heading>);
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Heading test/i,
+      })
+    ).toHaveStyle({
+      'font-size': '2.0rem',
+    });
+  });
 });
