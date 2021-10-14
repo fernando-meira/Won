@@ -6,6 +6,7 @@ export type HeadingProps = {
   size?: 'small' | 'medium';
   color?: 'white' | 'black';
   children: React.ReactNode;
+  lineColor?: 'primary' | 'secondary';
 };
 
 export default function Heading({
@@ -14,6 +15,7 @@ export default function Heading({
   color = 'black',
   lineLeft = false,
   lineBottom = false,
+  lineColor = 'primary',
 }: HeadingProps) {
   return (
     <S.Container
@@ -21,6 +23,7 @@ export default function Heading({
       color={color}
       lineLeft={lineLeft}
       lineBottom={lineBottom}
+      lineColor={lineColor}
     >
       {children}
     </S.Container>
