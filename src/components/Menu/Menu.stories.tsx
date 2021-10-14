@@ -9,6 +9,8 @@ export default {
 
 export const Mobile: Story<MenuProps> = (args) => <Menu {...args} />;
 
+export const Desktop: Story<MenuProps> = (args) => <Menu {...args} />;
+
 Mobile.parameters = {
   backgrounds: {
     default: 'dark',
@@ -29,4 +31,20 @@ Mobile.parameters = {
   },
 
   layout: 'fullscreen',
+};
+
+Desktop.parameters = {
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'light',
+        value: '#fafafa',
+      },
+      {
+        name: 'dark',
+        value: '#282a36',
+      },
+    ],
+  },
 };
