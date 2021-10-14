@@ -37,7 +37,7 @@ describe('<Heading />', () => {
         name: /heading test/i,
       })
     ).toHaveStyle({
-      'border-left': '0.7rem solid #3CD3C1',
+      'border-left': '0.7rem solid #F231A5',
     });
   });
 
@@ -74,6 +74,36 @@ describe('<Heading />', () => {
       })
     ).toHaveStyle({
       'font-size': '2.0rem',
+    });
+  });
+
+  it('should be render heading with lineLeft primary', () => {
+    renderWithTheme(
+      <Heading lineLeft lineColor="primary">
+        Heading test
+      </Heading>
+    );
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Heading test/i,
+      })
+    ).toHaveStyleRule('border-left', '0.7rem solid #F231A5');
+  });
+
+  it('should be render heading with lineBottom secondary', () => {
+    renderWithTheme(
+      <Heading lineBottom lineColor="secondary">
+        Heading Test
+      </Heading>
+    );
+
+    expect(
+      screen.getByRole('heading', {
+        name: /Heading test/i,
+      })
+    ).toHaveStyleRule('border-bottom', '0.5rem solid #3CD3C1', {
+      modifier: '::after',
     });
   });
 });

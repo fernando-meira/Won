@@ -1,12 +1,14 @@
 import * as S from './styles';
 
+export type LineColorProps = 'primary' | 'secondary';
+
 export type HeadingProps = {
   lineLeft?: boolean;
   lineBottom?: boolean;
   size?: 'small' | 'medium';
   color?: 'white' | 'black';
   children: React.ReactNode;
-  lineColor?: 'primary' | 'secondary';
+  lineColor?: LineColorProps;
 };
 
 export default function Heading({
