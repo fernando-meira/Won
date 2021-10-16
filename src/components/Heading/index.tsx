@@ -24,8 +24,8 @@ export default function Heading({
       size={size}
       color={color}
       lineLeft={lineLeft}
-      lineBottom={lineBottom}
       lineColor={lineColor}
+      lineBottom={lineBottom}
     >
       {children}
     </S.Container>
