@@ -1,88 +1,68 @@
-import Link from 'next/link';
-
-import Heading from 'components/Heading';
-import Logo from 'components/Logo';
 import * as S from './styles';
 
-const Footer = () => (
-  <S.Container>
-    <Logo color="black" />
-    <S.Content>
-      <S.Column>
-        <Heading color="black" size="small" lineBottom lineColor="secondary">
-          Contact Us
-        </Heading>
+import Heading from '../Heading';
+import Logo from 'components/Logo';
 
-        <a href="mailto:sac@wongames.com">sac@wongames.com</a>
-      </S.Column>
+export default function Footer() {
+  return (
+    <S.Container>
+      <Logo color="black" />
 
-      <S.Column>
-        <Heading color="black" lineColor="secondary" lineBottom size="small">
-          Follow us
-        </Heading>
+      <S.Content>
+        <S.Column>
+          <Heading lineBottom lineColor="secondary" size="small">
+            Contact
+          </Heading>
 
-        <nav aria-labelledby="social media">
-          <a
-            href="https://www.instagram.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.twitter.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://www.youtube.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Youtube
-          </a>
-          <a
-            href="https://www.facebook.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Facebook
-          </a>
-        </nav>
-      </S.Column>
+          <S.Anchor href="mailto:thomwork@outlook.com">
+            thomwork@outlook.com
+          </S.Anchor>
 
-      <S.Column>
-        <Heading color="black" lineColor="secondary" lineBottom size="small">
-          Links
-        </Heading>
+          <S.Anchor href="tel:15998266793">+55 15 998266793</S.Anchor>
+        </S.Column>
 
-        <nav aria-labelledby="footer resources">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/games">
-            <a>Store</a>
-          </Link>
-          <Link href="/search">
-            <a>Buscar</a>
-          </Link>
-        </nav>
-      </S.Column>
+        <S.Column>
+          <Heading lineBottom lineColor="secondary" size="small">
+            Follow us
+          </Heading>
 
-      <S.Column aria-labelledby="footer-contact">
-        <Heading color="black" lineColor="secondary" lineBottom size="small">
-          Location
-        </Heading>
-        <span>Lorem ipsum dolor sit.</span>
-        <span>Lorem Ipsum</span>
-        <span>Lorem, ipsum dolor.</span>
-      </S.Column>
-    </S.Content>
+          <S.Anchor href="#">Instagram</S.Anchor>
 
-    <S.Copyright>Won Games 2020 © All rights reserved.</S.Copyright>
-  </S.Container>
-);
+          <S.Anchor href="#">Twitter</S.Anchor>
 
-export default Footer;
+          <S.Anchor href="#">YouTube</S.Anchor>
+
+          <S.Anchor href="#">Facebook</S.Anchor>
+        </S.Column>
+
+        <S.Column>
+          <Heading lineBottom lineColor="secondary" size="small">
+            Links
+          </Heading>
+
+          <nav>
+            <S.Anchor href="#">Loja</S.Anchor>
+
+            <S.Anchor href="#">Explorar</S.Anchor>
+
+            <S.Anchor href="#">Buscar</S.Anchor>
+
+            <S.Anchor href="#">FAQ</S.Anchor>
+          </nav>
+        </S.Column>
+
+        <S.Column aria-labelledby="footer-contact">
+          <Heading color="black" lineColor="secondary" lineBottom size="small">
+            Location
+          </Heading>
+
+          <span>Ana Maria Ferreira Baltazar</span>
+
+          <span>750, Bloco 11, Apto.204</span>
+
+          <span>Itapetininga, SP</span>
+        </S.Column>
+      </S.Content>
+    </S.Container>
+  );
+}
