@@ -14,11 +14,13 @@ export default function Footer() {
             Contact
           </Heading>
 
-          <S.Anchor href="mailto:thomwork@outlook.com">
-            thomwork@outlook.com
-          </S.Anchor>
+          <nav>
+            <S.Anchor href="mailto:thomwork@outlook.com">
+              thomwork@outlook.com
+            </S.Anchor>
 
-          <S.Anchor href="tel:15998266793">+55 15 998266793</S.Anchor>
+            <S.Anchor href="tel:15998266793">+55 15 998266793</S.Anchor>
+          </nav>
         </S.Column>
 
         <S.Column>
@@ -26,13 +28,15 @@ export default function Footer() {
             Follow us
           </Heading>
 
-          <S.Anchor href="#">Instagram</S.Anchor>
+          <nav>
+            <S.Anchor href="#">Instagram</S.Anchor>
 
-          <S.Anchor href="#">Twitter</S.Anchor>
+            <S.Anchor href="#">Twitter</S.Anchor>
 
-          <S.Anchor href="#">YouTube</S.Anchor>
+            <S.Anchor href="#">YouTube</S.Anchor>
 
-          <S.Anchor href="#">Facebook</S.Anchor>
+            <S.Anchor href="#">Facebook</S.Anchor>
+          </nav>
         </S.Column>
 
         <S.Column>
