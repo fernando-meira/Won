@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import * as S from './styles';
+
+type ButtonTypes =
+  | AnchorHTMLAttributes<HTMLAnchorElement>
+  | ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonProps = {
   isFullWidth?: boolean;
+  as?: React.ElementType;
   icon?: React.ReactNode;
-  children?: React.ReactNode;
   size?: 'small' | 'medium' | 'large';
-  onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void;
-};
+} & ButtonTypes;
 
 export default function Button({
   icon,

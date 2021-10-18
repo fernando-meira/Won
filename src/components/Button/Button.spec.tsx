@@ -70,4 +70,18 @@ describe('<Button />', () => {
       width: '1.5rem',
     });
   });
+
+  it('should be render anchor element', () => {
+    renderWithTheme(
+      <Button as="a" href="/link">
+        Button test
+      </Button>
+    );
+
+    expect(
+      screen.getByRole('link', {
+        name: /Button test/i,
+      })
+    ).toHaveAttribute('href', '/link');
+  });
 });

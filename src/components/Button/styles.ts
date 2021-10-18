@@ -49,6 +49,10 @@ export const Container = styled.button<WrapperProps>`
     color: ${theme.colors.white};
     background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
 
+    &:hover {
+      background: linear-gradient(180deg, #e35565 0%, #d958a6 50%);
+    }
+
     ${!!size && containerModifiers[size](theme)};
     ${hasIcon && containerModifiers.withIcon(theme)};
     ${isFullWidth && containerModifiers.isFullWidth()};
