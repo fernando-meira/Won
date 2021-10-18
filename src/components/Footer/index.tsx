@@ -5,7 +5,7 @@ import Logo from 'components/Logo';
 
 export default function Footer() {
   return (
-    <S.Container>
+    <S.Container aria-label="rodapé">
       <Logo color="black" />
 
       <S.Content>
