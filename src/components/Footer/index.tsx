@@ -67,6 +67,8 @@ export default function Footer() {
           <span>Itapetininga, SP</span>
         </S.Column>
       </S.Content>
+
+      <S.Copyright>Won Games 2020 © Todos os Direitos Reservados</S.Copyright>
     </S.Container>
   );
 }
