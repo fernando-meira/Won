@@ -17,8 +17,12 @@ describe('<Banner />', () => {
 
     debug(container);
 
-    // Verificar se o title existe renderizado
-    // Verificar se o subtitle existe renderizado
-    // Verificar se a imagem existe renderizada
+    expect(screen.getByLabelText(/defy death/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /defy death/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /play the new crashlands season/i })
+    ).toBeInTheDocument();
   });
 });

@@ -18,7 +18,7 @@ export default function Banner({
 }: BannerProps) {
   return (
     <S.Container>
-      <S.Image src={image} role="img" aria-label="title" />
+      <S.Image src={image} role="img" aria-label={title} />
 
       <S.Caption>
         <S.Title>{title}</S.Title>
