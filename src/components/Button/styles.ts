@@ -25,10 +25,6 @@ const containerModifiers = {
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
   `,
   withIcon: (theme: DefaultTheme) => css`
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-
     svg {
       width: 1.5rem;
 
@@ -45,7 +41,12 @@ export const Container = styled.button<WrapperProps>`
     padding: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
 
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
     cursor: pointer;
+    text-decoration: none;
     color: ${theme.colors.white};
     background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
 
