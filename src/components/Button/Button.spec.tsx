@@ -72,15 +72,17 @@ describe('<Button />', () => {
   });
 
   it('should be render anchor element', () => {
-    renderWithTheme(
+    const { debug, container } = renderWithTheme(
       <Button as="a" href="/link">
-        Button test
+        Anchor test
       </Button>
     );
 
+    debug(container);
+
     expect(
       screen.getByRole('link', {
-        name: /Button test/i,
+        name: /Anchor test/i,
       })
     ).toHaveAttribute('href', '/link');
   });
