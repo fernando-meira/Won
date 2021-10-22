@@ -1,6 +1,5 @@
 <div>
   <img src="https://img.shields.io/static/v1?label=React&message=17.0.2&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" alt="Version of the react" />
-  <img src="https://img.shields.io/static/v1?label=progress&message25%&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 </div>
 
 <div>
@@ -100,8 +99,7 @@ yarn dev
 ---
 
 ### Testes
-
-![Terminado com testes](src/assets/readme/terminal-with-tests.png)
+<p> Em breve um resumo. </p>
 
 ##### Execute o comando a seguir para rodar os testes unitários
 ```bash
