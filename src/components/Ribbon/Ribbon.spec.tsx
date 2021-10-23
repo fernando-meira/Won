@@ -9,4 +9,12 @@ describe('<Ribbon />', () => {
 
     expect(screen.getByText(/best seller/i)).toBeInTheDocument();
   });
+
+  it('should render with the primary color', () => {
+    renderWithTheme(<Ribbon>Best Seller</Ribbon>);
+
+    expect(screen.getByLabelText(/etiqueta/i)).toHaveStyle({
+      background: '3CD3C1',
+    });
+  });
 });

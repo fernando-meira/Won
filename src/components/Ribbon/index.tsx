@@ -5,5 +5,5 @@ export type RibbonProps = {
 };
 
 export default function Ribbon({ children }: RibbonProps) {
-  return <S.Container>{children}</S.Container>;
+  return <S.Container aria-label="etiqueta">{children}</S.Container>;
 }
