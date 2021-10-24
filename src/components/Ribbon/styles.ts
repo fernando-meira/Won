@@ -1,9 +1,9 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 
-import { ColorProps, RibbonProps } from '.';
+import { RibbonColors, RibbonProps } from '.';
 
 const containerModifiers = {
-  color: (theme: DefaultTheme, color: ColorProps) => css`
+  color: (theme: DefaultTheme, color: RibbonColors) => css`
     background: ${theme.colors[color]};
   `,
 };

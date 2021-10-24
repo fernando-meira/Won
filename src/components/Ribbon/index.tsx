@@ -1,9 +1,9 @@
 import * as S from './styles';
 
-export type ColorProps = 'primary' | 'secondary';
+export type RibbonColors = 'primary' | 'secondary';
 
 export type RibbonProps = {
-  color?: ColorProps;
+  color?: RibbonColors;
   children: React.ReactNode;
 };
 
