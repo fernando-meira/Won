@@ -7,4 +7,4 @@ export default {
   component: Ribbon,
 } as Meta;
 
-export const Basic: Story = () => <Ribbon>Ribbon</Ribbon>;
+export const Basic: Story = (args) => <Ribbon {...args}>Ribbon</Ribbon>;
