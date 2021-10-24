@@ -14,7 +14,7 @@ describe('<Ribbon />', () => {
     renderWithTheme(<Ribbon>Best Seller</Ribbon>);
 
     expect(screen.getByLabelText(/etiqueta/i)).toHaveStyle({
-      background: '3CD3C1',
+      background: '#3CD3C1',
     });
   });
 });
