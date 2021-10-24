@@ -1,8 +1,10 @@
 import * as S from './styles';
 
+export type ColorProps = 'primary' | 'secondary';
+
 export type RibbonProps = {
+  color?: ColorProps;
   children: React.ReactNode;
-  color?: 'primary' | 'secondary';
 };
 
 export default function Ribbon({ children, color = 'primary' }: RibbonProps) {
