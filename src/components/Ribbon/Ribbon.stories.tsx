@@ -6,7 +6,7 @@ export default {
   title: 'Ribbon',
   component: Ribbon,
   args: {
-    children: 'Best Seller',
+    children: 'Bestselling',
   },
   argTypes: {
     children: {
