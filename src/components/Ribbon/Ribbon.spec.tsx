@@ -31,7 +31,7 @@ describe('<Ribbon />', () => {
 
     expect(screen.getByLabelText(/etiqueta/i)).toHaveStyle({
       height: '3.6rem',
-      'font-size': '1.6rem',
+      'font-size': '1.4rem',
     });
   });
 
