@@ -1,24 +1,39 @@
 import Button from '../Button';
+import Ribbon from '../Ribbon';
+import RibbonColors from '../Ribbon';
+
 import * as S from './styles';
 
 export type BannerProps = {
   image: string;
   title: string;
+  ribbon: string;
   subtitle: string;
   buttonLink: string;
   buttonLabel: string;
+  ribbonSize?: 'small' | 'normal';
+  ribbonColor?: 'primary' | 'secondary';
 };
 
 export default function Banner({
   image,
   title,
+  ribbon,
   subtitle,
   buttonLink,
+  ribbonSize,
   buttonLabel,
+  ribbonColor,
 }: BannerProps) {
   return (
     <S.Container>
       <S.Image src={image} role="img" aria-label={title} />
+
+      {!!ribbon && (
+        <Ribbon size={ribbonSize} color={ribbonColor}>
+          {ribbon}
+        </Ribbon>
+      )}
 
       <S.Caption>
         <S.Title>{title}</S.Title>
