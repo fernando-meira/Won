@@ -1,16 +1,15 @@
 import Button from '../Button';
 import Ribbon from '../Ribbon';
-import RibbonColors from '../Ribbon';
 
 import * as S from './styles';
 
 export type BannerProps = {
   image: string;
   title: string;
-  ribbon: string;
   subtitle: string;
   buttonLink: string;
   buttonLabel: string;
+  ribbon: React.ReactNode;
   ribbonSize?: 'small' | 'normal';
   ribbonColor?: 'primary' | 'secondary';
 };
