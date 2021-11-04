@@ -7,6 +7,7 @@ export type HighlightProps = {
   subtitle: string;
   buttonLink: string;
   buttonLabel: string;
+  backgroundImage: string;
 };
 
 export default function Highlight({
@@ -14,9 +15,10 @@ export default function Highlight({
   subtitle,
   buttonLink,
   buttonLabel,
+  backgroundImage,
 }: HighlightProps) {
   return (
-    <S.Container>
+    <S.Container backgroundImage={backgroundImage}>
       <S.Content>
         <S.Title>{title}</S.Title>
 

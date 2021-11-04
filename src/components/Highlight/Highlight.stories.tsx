@@ -10,6 +10,7 @@ export default {
     subtitle: 'Come see John’s new adventures',
     buttonLabel: 'Buy now',
     buttonLink: '/home',
+    backgroundImage: '/img/red-dead-img.png',
   },
   parameters: {
     layout: 'fullscreen',
