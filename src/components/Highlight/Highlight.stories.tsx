@@ -11,6 +11,9 @@ export default {
     buttonLabel: 'Buy now',
     buttonLink: '/home',
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta;
 
 export const Basic: Story<HighlightProps> = (args) => <Highlight {...args} />;

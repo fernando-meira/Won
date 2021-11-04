@@ -17,13 +17,15 @@ export default function Highlight({
 }: HighlightProps) {
   return (
     <S.Container>
-      <S.Title>{title}</S.Title>
+      <S.Content>
+        <S.Title>{title}</S.Title>
 
-      <S.Subtitle>{subtitle}</S.Subtitle>
+        <S.Subtitle>{subtitle}</S.Subtitle>
 
-      <Button as="a" href={buttonLink}>
-        {buttonLabel}
-      </Button>
+        <Button as="a" href={buttonLink}>
+          {buttonLabel}
+        </Button>
+      </S.Content>
     </S.Container>
   );
 }
