@@ -12,6 +12,8 @@ export const Container = styled.section<ContainerProps>`
     height: 23rem;
 
     display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    grid-template-areas: 'floatImage content';
 
     background-size: cover;
     background-position: center center;
@@ -33,9 +35,27 @@ export const Container = styled.section<ContainerProps>`
   `}
 `;
 
+export const FloatImage = styled.img`
+  ${({ theme }) => css`
+    max-width: 100%;
+    max-height: 23rem;
+
+    align-self: end;
+    grid-area: floatImage;
+
+    z-index: ${theme.layers.base};
+
+    ${media.greaterThan('medium')`
+      max-height: 32rem;
+    `}
+  `}
+`;
+
 export const Content = styled.div`
   ${({ theme }) => css`
     padding: ${theme.spacings.xsmall};
+
+    grid-area: content;
 
     text-align: right;
     z-index: ${theme.layers.base};

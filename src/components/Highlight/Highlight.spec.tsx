@@ -42,4 +42,16 @@ describe('<Highlight />', () => {
       backgroundImage: `url(${defaultProps.backgroundImage})`,
     });
   });
+
+  it('should render the float image', () => {
+    renderWithTheme(
+      <Highlight {...defaultProps} floatImage="/float-image.png" />
+    );
+
+    expect(
+      screen.getByRole('img', {
+        name: defaultProps.title,
+      })
+    ).toHaveAttribute('src', '/float-image.png');
+  });
 });

@@ -15,4 +15,8 @@ export default {
   },
 } as Meta;
 
-export const Basic: Story<RibbonProps> = (args) => <Ribbon {...args} />;
+export const Basic: Story<RibbonProps> = (args) => (
+  <div style={{ maxWidth: '1080px', margin: '0 auto', position: 'relative' }}>
+    <Ribbon {...args} />
+  </div>
+);
